@@ -1,29 +1,24 @@
-import React from 'react'
-import "./Navbar.css";
+import React from 'react';
+import "./Navbar.css"
+import {GiHamburgerMenu} from "react-icons/gi";
+
 
 const Navbar = () => {
   return (
-    <div id='nav-menu'>
-      <div id="nav_name_div">
-        <h1 href="" id="nav_name" >Shreshth</h1>
-      </div>
-      <div id='nav_components'>
-        <p class="nav-link home"> <a href="#home">Home</a></p>
-        <p class="nav-link about"> <a href="#about">About</a></p>
-        <p class="nav-link skills"> <a href="#skills">Skills</a></p>
-        <p  class="nav-link projects"> <a href="#projects"> Projects</a></p>
-        <p class="nav-link contact"> <a href="#contact"> Contact</a></p>
-      </div>
-      <div class="nav-link resume">
-        <button id="resume_dwnld">Resume</button>
-      </div>
-    </div>
+    <nav id="nav-menu">
+      <div className='logo'><span className='span' >{"<"}</span>  Shreshth{" "} <span className='span'> / {">"}</span></div>
+      <input type="checkbox" id='click' />
+      <label for="click" className='menu-btn'><GiHamburgerMenu /></label>
+      <ul>
+        <li><a className='nav-link home' href="#home">Home</a></li>
+        <li><a className='nav-link about' href="#about">About</a></li>
+        <li><a className='nav-link skills' href="#skills">Skills</a></li>
+        <li><a className='nav-link projects' href="#projects">Projects</a></li>
+        <li><a className='nav-link contact' href="#contact">Contact</a></li>
+        <li  className='nav-link resume'> Resume</li>
+      </ul>
+    </nav>
   )
 }
 
 export default Navbar;
-
-
-
-//#FF6A3D
-//#F4DB7D

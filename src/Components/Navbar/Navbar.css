@@ -1,35 +1,101 @@
-html{
-    scroll-behavior: smooth;;
-  }
-#nav-menu{
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content:space-around ;
-  background-color: #1A2238;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
 }
-a{
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #1A2238;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+nav .logo{
+    
+    font-size: 25px;
+    color: #F4DB7D;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.span{
+    color:#FF6A3D ;
+    font-weight: 600;
+    margin: 5px;
+    transition: background-color 2s ease-out 100ms
+}
+.span:hover{
+   color: #ee3b04;
+   cursor: pointer;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 15px;
+    color: #fff;
     text-decoration: none;
-    color: white;
-  }
-#nav_name_div{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-right: 50px;
-    border: 1px solid red;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
-#nav_name{
-    color:#F4DB7D ;
+nav ul li a{
+ color: #fff;
+ text-decoration: none;
+ font-size: 18px;
+ font-weight: 500;
+ letter-spacing: 1px;
+
 }
-#nav_components{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    border: 1px solid blue;
-    align-items: center;
-    justify-content: space-evenly;
+nav ul li a:hover{
+color: #F4DB7D;
+}
+nav .menu-btn{
+    color: #F4DB7D;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+@media (max-width: 940px){
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #1A2238;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    nav ul li a:hover{
+color: #F4DB7D;
+}
+nav .menu-btn{
+    display:block;
+}
+
 }

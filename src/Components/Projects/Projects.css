@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A2238;
+  
+}
+.projects-head{
+    width:15%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    color: #F4DB7D;
+    background-color: #1A2238; 
+    border: 2px solid #F4DB7D ;
+    border-style: dotted;
+    border-radius: 10px;
+    margin-top:130px;
+    margin-bottom:100px;
+}
+.projects-head h1{
+    font-size: 35px;
+}
+.My_Projects{
+    width: 85%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.Project-card{
+    border-bottom:2px solid #F4DB7D;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    text-align: center;
+    color: #F4DB7D;
+   
+}
+.project-links{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-around; 
+}
+img{
+    width: 98%;
+    margin: auto;
+    transition: width 5s;
+    border-radius: 10px;
+
+}
+img:hover{
+    transform: scale(1.08); /* or whatever scale factor you prefer */
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out
+ 
+}
+.style-github{
+    border: 2px solid #F4DB7D;
+    width: 110px;
+    height: 40px;
+    color: #F4DB7D;
+    background-color: transparent;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 15px;
+    display: inline-block;
+    gap: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.style-github:hover{
+    width: 130px;
+    cursor: pointer;
+}
+.style-link{
+    border: 2px solid #F4DB7D;
+    width: 110px;
+    height: 40px;
+    color: #F4DB7D;
+    background-color: transparent;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 15px;
+    display: inline-block;
+    gap: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.style-link:hover{
+    width: 130px;
+    cursor: pointer;
+}
+.GitHub{
+    width: 45%;
+    height: 40px;
+    border: 2px solid #F4DB7D;
+    font-size: 20px;
+ 
+}
+
+.github-icon{
+    color: #F4DB7D;
+    
+}
+.Link{
+    width: 45%;
+    height: 40px;
+    border: 2px solid #F4DB7D;
+    font-size: 20px;
+ 
+}
+@media (max-width: 940px){
+    .My_Projects{
+         display: grid;
+         grid-template-columns: repeat(1, 1fr);
+         gap: 20px;
+    }
+    .projects-head h1{
+        font-size: 20px;
+    }
+    .project-links{
+        width: 80%;
+    }
+}
