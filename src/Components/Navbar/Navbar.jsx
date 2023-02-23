@@ -1,12 +1,12 @@
 import React from 'react';
 import "./Navbar.css"
 import {GiHamburgerMenu} from "react-icons/gi";
-
+import Shreshth_Kumar_Resume  from "../Downloads/Shreshth_Kumar_Resume.pdf";
 
 const Navbar = () => {
   return (
     <nav id="nav-menu">
-      <div className='logo'><span className='span' >{"<"}</span>  Shreshth{" "} <span className='span'> / {">"}</span></div>
+      <div className='logo'><span className='span' >{"<"}</span>  Shreshth <span className='span'> / {">"}</span></div>
       <input type="checkbox" id='click' />
       <label for="click" className='menu-btn'><GiHamburgerMenu /></label>
       <ul>
@@ -15,10 +15,15 @@ const Navbar = () => {
         <li><a className='nav-link skills' href="#skills">Skills</a></li>
         <li><a className='nav-link projects' href="#projects">Projects</a></li>
         <li><a className='nav-link contact' href="#contact">Contact</a></li>
-        <li  className='nav-link resume'> Resume</li>
+        <li id="resume-button-1"  className='nav-link resume'><a target="_blank" href={Shreshth_Kumar_Resume} download onClick={()=> window.open("https://drive.google.com/file/d/17dDau_VkHpOI3PPRKfd13BGihtd6CqsD/view?usp=sharing")}>Resume</a> </li>
       </ul>
     </nav>
   )
 }
 
 export default Navbar;
+
+
+/*
+
+*/

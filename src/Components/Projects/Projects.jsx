@@ -1,17 +1,49 @@
 import React from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
-import { BsGithub } from "react-icons/bs";
-import { FaLink } from "react-icons/fa";
+
 
 const Projects = () => {
+
+  const styleDem = () => {
+    window.open("https://genuine-mousse-0f20e2.netlify.app/")
+  }
+
+  const styleGit = () => {
+    window.open("https://github.com/shreshthkr/polite-design-6184")
+  }
+
+  const expGit = () => {
+    window.open("https://github.com/Shubham-Dandekar/expedia.com-clone")
+  }
+
+  const expDem = () => {
+    window.open("https://clone-expedia.netlify.app/")
+  }
+
+  const urbanGit = () => {
+    window.open("https://github.com/shreshthkr/overrated-clam-5001")
+  }
+  const urbanDem = () => {
+    window.open("https://639fa5d018290c7021ff4b09--nimble-jelly-7dbf24.netlify.app/")
+  }
+
+  const craftsGit = () => {
+    window.open("https://github.com/shreshthkr/defective-week-6965")
+  }
+
+  const craftsDem = () => {
+    window.open("https://coruscating-mooncake-55a32f.netlify.app/")
+  }
+
+
   return (
     <div id="projects">
       <div className="projects-head">
         <h1>Projects</h1>
       </div>
       <div className="My_Projects">
-        <div className="Project-card">
+        <div className="project-card">
           <div className="project-image">
             <img
               src="https://www.linkpicture.com/q/Screenshot-766_1.png"
@@ -27,23 +59,20 @@ const Projects = () => {
               women products and problems
             </p>
           </div>
-          <div className="project-tech">
+          <div className="project-tech-stack">
             <p>Tech-Stack: HTML | CSS | JavaScript </p>
           </div>
           <div className="project-links">
-            <Link to="https://github.com/shreshthkr/polite-design-6184">
-              <button id="contact-github"  className="style-github">
-                <BsGithub /> GitHub
-              </button>
-            </Link>
-            <Link to="https://genuine-mousse-0f20e2.netlify.app/">
-              <button className="style-link">
-                <FaLink /> Demo
-              </button>
-            </Link>
+           
+             <button onClick={styleGit}>GitHub</button>
+          
+          
+             <button onClick={styleDem}>Demo</button>
+          
+            
           </div>
         </div>
-        <div className="Project-card">
+        <div className="project-card">
           <div className="project-image">
             <img
               src="https://www.linkpicture.com/q/Screenshot-768_1.png"
@@ -59,26 +88,17 @@ const Projects = () => {
               packages. A variety of services are available through the website.
             </p>
           </div>
-          <div className="project-tech">
+          <div className="project-tech-stack">
             <p>Tech-Stack: HTML | CSS | JavaScript </p>
           </div>
           <div className="project-links">
            
-              <Link to="https://github.com/Shubham-Dandekar/expedia.com-clone">
-                <button id="contact-github" className="style-github">
-                  <BsGithub /> GitHub
-                </button>
-              </Link>
-              <Link to="clone-expedia.netlify.app/">
-                <button className="style-link">
-             
-                  <FaLink /> Demo
-                </button>
-              </Link>
+             <button onClick={expGit}>GitHub</button>
+             <button onClick={expDem}>Demo</button>
            
           </div>
         </div>
-        <div className="Project-card">
+        <div className="project-card">
           <div className="project-image">
             <img
               src="https://www.linkpicture.com/q/Screenshot-764.png"
@@ -95,25 +115,16 @@ const Projects = () => {
               personal services.
             </p>
           </div>
-          <div className="project-tech">
+          <div className="project-tech-stack">
             <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
           </div>
           <div className="project-links">
-            
-              <Link to="https://github.com/shreshthkr/overrated-clam-5001">
-                <button id="contact-github" className="style-github">
-                  <BsGithub /> GitHub
-                </button>
-              </Link>
-              <Link to="https://639fa5d018290c7021ff4b09--nimble-jelly-7dbf24.netlify.app/">
-                <button className="style-link">
-                  <FaLink /> Demo
-                </button>
-              </Link>
+          <button onClick={urbanGit}>GitHub</button>
+             <button onClick={urbanDem}>Demo</button>
          
           </div>
         </div>
-        <div className="Project-card">
+        <div className="project-card">
           <div className="project-image">
             <img
               src="https://www.linkpicture.com/q/Screenshot-763_1.png"
@@ -129,21 +140,12 @@ const Projects = () => {
               platform for products related to Home-Decor.
             </p>
           </div>
-          <div className="project-tech">
+          <div className="project-tech-stack">
             <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
           </div>
           <div className="project-links">
-            <Link to="https://github.com/shreshthkr/defective-week-6965">
-              <button id="contact-github" className="style-github">
-                <BsGithub className="github-icon" />
-                GitHub
-              </button>
-            </Link>
-             <Link to="https://coruscating-mooncake-55a32f.netlify.app/">
-              <button className="style-link">
-              <FaLink  /> Demo
-              </button>
-             </Link>
+          <button onClick={craftsGit} >GitHub</button>
+             <button onClick={craftsDem} >Demo</button>
           
           </div>
         </div>
@@ -154,14 +156,3 @@ const Projects = () => {
 
 export default Projects;
 
-/*
-
-https://www.linkpicture.com/q/Screenshot-766_1.png
-https://www.linkpicture.com/q/Screenshot-768_1.png
-https://www.linkpicture.com/q/Screenshot-763_1.png
-https://www.linkpicture.com/q/Screenshot-764.png
-
-*/
-
-//https://github.com/shreshthkr/polite-design-6184
-//https://genuine-mousse-0f20e2.netlify.app/

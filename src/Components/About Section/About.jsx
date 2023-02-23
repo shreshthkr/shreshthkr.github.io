@@ -3,9 +3,9 @@ import "./About.css"
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="about section">
       <div className='about-me'><h1>About me</h1></div>
-    <div  className="about section">
+    <div  className='about-intro' >
        <div className='picture' >
        <img class="home-img" src="https://www.linkpicture.com/q/Untitled-design-1_4.jpg" alt="Shreshth-Kumar" />
        </div>

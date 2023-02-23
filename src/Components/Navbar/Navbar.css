@@ -17,13 +17,14 @@ nav{
     padding: 0px 50px 0px 100px;
 }
 nav .logo{
-    
+    width:260px ;
     font-size: 25px;
     color: #F4DB7D;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 30px;
 }
 .span{
     color:#FF6A3D ;
@@ -70,6 +71,9 @@ nav .menu-btn{
 }
 
 @media (max-width: 940px){
+    nav.logo{
+        margin-right: 50px;
+    }
     nav ul{
         position: fixed;
         top: 80px;

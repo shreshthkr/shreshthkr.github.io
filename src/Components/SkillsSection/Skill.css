@@ -69,6 +69,15 @@
   cursor: pointer;
 }
 @media (max-width: 940px){
+    .skill-head{
+        width: 20%;
+        height: 50px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .skill-head h1{
+        font-size: 18px;
+    }
     .skill-section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

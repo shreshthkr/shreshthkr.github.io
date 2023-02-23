@@ -72,12 +72,22 @@
 .resume-btn{
     width: 25%;
     height: 60px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }  
-.resume-btn button{
-    width: 40%;
+.dowload{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-decoration: none;
+}
+#resume-link-2{
+    width: 50%;
     height: 80%;
     border-radius: 10px;
     border: 2px solid #F4DB7D ;
@@ -86,12 +96,14 @@
     font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:center;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
-.resume-btn button:hover{
-    width: 50%;
+
+#resume-link-2:hover{
+    width: 60%;
+    height: 85%;
 }  
 @media (max-width: 940px){
     .resume-btn{

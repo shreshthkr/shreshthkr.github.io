@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1A2238;
+}
+.github-head{
+    width:15%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    color: #F4DB7D;
+    background-color: #1A2238; 
+    border: 2px solid #F4DB7D ;
+    border-style: dotted;
+    border-radius: 10px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+.github-head h1{
+    font-size: 35px;
+
+}
+.Calendar{
+    color: #F4DB7D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.Github-calendar{
+    width: 80%;
+    color: #F4DB7D;
+    margin: auto;
+}
+.stats-head{
+    color: #F4DB7D;
+    text-align: center;
+    margin-top: 80px;
+}
+.github-streaks{
+    width: 80%;
+    height: 15rem;
+    margin: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+
+}
+#github-top-langs-div{
+    /* width: 40%;
+    height: 320px;
+    margin: auto;
+     */
+    width:40%; 
+    height: 300px;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+#github-top-langs-div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 15px;
+}
+
+@media (max-width: 940px){
+    .github-head{
+        width: 20%;
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .github-head h1{
+        font-size: 18px;
+    }
+    .github-streaks{
+        margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:30px; 
+    }
+    .stats-head{
+        margin-top: 40px;
+    }
+    #github-top-langs-div{
+        width: 80%;
+        margin-top: 240px;
+        object-fit: cover;
+    }
+}
