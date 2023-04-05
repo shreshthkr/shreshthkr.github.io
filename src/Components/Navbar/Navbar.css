@@ -13,7 +13,7 @@ nav{
     background-color: #1A2238;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0px 50px 0px 100px;
 }
 nav .logo{
@@ -42,7 +42,7 @@ nav ul{
 }
 
 nav ul li{
-    margin: 0 15px;
+    margin: 0 10px;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -66,11 +66,31 @@ nav .menu-btn{
     cursor: pointer;
     display: none;
 }
+.last_list{
+    display: inline-flex;
+    align-items: center;
+    justify-content: baseline;
+  
+}
+.last_list>button{
+    margin-top: 0px;
+}
 #click{
     display: none;
 }
-
+#resume-link-1{
+    /* display: inline-flex; */
+ 
+}
+#resume-button-1{
+    /* width: 100px; */
+    /* display: block; */
+    border: none;
+}
 @media (max-width: 940px){
+    nav{
+        width: 100%;
+    }
     nav.logo{
         margin-right: 50px;
     }

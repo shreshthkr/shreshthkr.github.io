@@ -27,6 +27,8 @@ const skills = [
   },
   { id: 8, skill: "Git", img: "https://img.icons8.com/color/256/git.png" },
   { id: 9, skill: "Node", img: "https://img.icons8.com/color/256/nodejs.png" },
+  { id: 10, skill: "ExpressJs", img: "https://www.orafox.com/wp-content/uploads/2019/01/expressjs.png" },
+  { id: 11, skill: "MongoDb", img: "https://img.icons8.com/color/256/mongodb.png" },
 ];
 
 const Skills = () => {

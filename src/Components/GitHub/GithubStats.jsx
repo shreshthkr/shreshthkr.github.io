@@ -22,14 +22,14 @@ const GithubStats = () => {
         <div className="github-streaks">
           <div id="github-streak-stats-div">
             <img
-            id="github-streak-stats"
+              id="github-streak-stats"
               src="https://github-readme-streak-stats.herokuapp.com/?user=shreshthkr&theme=radical"
               alt="github streak"
             />
           </div>
           <div id="github-stats-card-div">
             <img
-            id="github-stats-card"
+              id="github-stats-card"
               src="https://github-readme-stats.vercel.app/api?username=shreshthkr&show_icons=true&theme=radical"
               alt="stats"
             />
@@ -37,8 +37,8 @@ const GithubStats = () => {
         </div>
         <div id="github-top-langs-div">
           <img
-          id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=shreshthkr&langs_count=8"
+            id="github-top-langs"
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=shreshthkr&show_icons=true&locale=en&layout=compact"
             alt="Most used lang"
           />
         </div>

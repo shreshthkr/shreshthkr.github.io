@@ -64,10 +64,10 @@ const Projects = () => {
           </div>
           <div className="project-links">
            
-             <button onClick={styleGit}>GitHub</button>
+             <button className="project-github-link" onClick={styleGit}>GitHub</button>
           
           
-             <button onClick={styleDem}>Demo</button>
+             <button className="project-deployed-link" onClick={styleDem}>Demo</button>
           
             
           </div>
@@ -93,8 +93,8 @@ const Projects = () => {
           </div>
           <div className="project-links">
            
-             <button onClick={expGit}>GitHub</button>
-             <button onClick={expDem}>Demo</button>
+             <button className="project-github-link" onClick={expGit}>GitHub</button>
+             <button className="project-deployed-link" onClick={expDem}>Demo</button>
            
           </div>
         </div>
@@ -119,8 +119,8 @@ const Projects = () => {
             <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
           </div>
           <div className="project-links">
-          <button onClick={urbanGit}>GitHub</button>
-             <button onClick={urbanDem}>Demo</button>
+          <button className="project-github-link" onClick={urbanGit}>GitHub</button>
+             <button className="project-deployed-link" onClick={urbanDem}>Demo</button>
          
           </div>
         </div>
@@ -144,8 +144,8 @@ const Projects = () => {
             <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
           </div>
           <div className="project-links">
-          <button onClick={craftsGit} >GitHub</button>
-             <button onClick={craftsDem} >Demo</button>
+          <button className="project-github-link" onClick={craftsGit} >GitHub</button>
+             <button className="project-deployed-link" onClick={craftsDem} >Demo</button>
           
           </div>
         </div>

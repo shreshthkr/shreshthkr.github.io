@@ -17,10 +17,10 @@ const Intro = () => {
             <h3>And I'm a</h3>
             <h3> <span class="animate-character">Full Stack Web Developer</span></h3>
         </div>
-        <div id="resume-button-2" className='resume-btn' >
+        <div className='resume-btn' >
            <a className='dowload' target="_blank" href={Shreshth_Kumar_Resume} download onClick={()=> window.open("https://drive.google.com/file/d/17dDau_VkHpOI3PPRKfd13BGihtd6CqsD/view?usp=sharing")}><button id="resume-link-2"><FaFileDownload />Resume</button></a>          
         </div>
-        <div className='social-media' ></div>
+        {/* <div className='social-media' ></div> */}
     </div>
   )
 }

@@ -1,18 +1,18 @@
 import React from 'react'
-import Intro from '../Intro/Intro';
 import About from '../About Section/About';
 import Skills from '../SkillsSection/Skills';
 import Projects from '../Projects/Projects';
 import GithubStats from '../GitHub/GithubStats';
 import {Contact} from '../Contact/Contact';
 import Footer from '../Footer/Footer';
+import Tools from '../Tools/Tools';
 
 const Home = () => {
   return (
     <div id="home" >
-      <Intro />
       <About />
       <Skills />
+      <Tools />
       <Projects />
       <GithubStats />
       <section id="contact">

@@ -24,11 +24,12 @@
     font-size: 35px;
 }
 .contact-box{
-  width: 60%;
+  max-width: 60%;
+  width: auto;
   height: 30rem;
   border: 2px solid #F4DB7D;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border-radius: 15px;
 
 }
