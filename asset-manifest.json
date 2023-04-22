@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d58d23d.css",
-    "main.js": "/static/js/main.803decd0.js",
+    "main.css": "/static/css/main.d3f84ac5.css",
+    "main.js": "/static/js/main.59580c7b.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
-    "static/media/Shreshth_Kumar_Resume.pdf": "/static/media/Shreshth_Kumar_Resume.acc53df4af07266d6381.pdf",
+    "static/media/Shreshth_Kumar_Resume.pdf": "/static/media/Shreshth_Kumar_Resume.ada7fca16f430169f7dd.pdf",
     "index.html": "/index.html",
-    "main.2d58d23d.css.map": "/static/css/main.2d58d23d.css.map",
-    "main.803decd0.js.map": "/static/js/main.803decd0.js.map",
+    "main.d3f84ac5.css.map": "/static/css/main.d3f84ac5.css.map",
+    "main.59580c7b.js.map": "/static/js/main.59580c7b.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d58d23d.css",
-    "static/js/main.803decd0.js"
+    "static/css/main.d3f84ac5.css",
+    "static/js/main.59580c7b.js"
   ]
 }
