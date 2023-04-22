@@ -1,34 +1,36 @@
-*{
-    background-color: #1A2238;  
+* {
+  background-color: #1a2238;
 }
-.Intro{
-    width: 100%;
-    height: 38rem;
-    margin: auto;
-    margin-top: 80px;
-    background-color: #1A2238;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 5%;
+.Intro {
+  width: 100%;
+  height: 38rem;
+  margin: auto;
+  margin-top: 80px;
+  background-color: #1a2238;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
 }
-.Greeting h1{
-   color: #FFFF;
-   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-weight: 600;
-   font-size: 40px;
-   text-align: center;
+.Greeting h1 {
+  color: #ffff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
 }
-.role h3{
-    color: #FFFF;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    text-align: center;
+.role h3 {
+  color: #ffff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
 }
-.animate-character{
-    text-transform: uppercase;
+.animate-character {
+  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #47bb8e 0%,
@@ -49,12 +51,12 @@
   font-size: 50px;
 }
 @keyframes textclip {
-    to {
-      background-position: 200% center;
-    }
+  to {
+    background-position: 200% center;
   }
+}
 
-  /* .formal-intro{
+/* .formal-intro{
     border: 1px solid teal;
     width: 30%;
     text-align: center;
@@ -66,129 +68,148 @@
 
   } */
 
-.resume-btn{
-    width: 45%;
-    height: 60px;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}  
-#resume-button-2{
-    height: 100%;
-      border: 2px solid #F4DB7D ;
+.resume-btn {
+  width: 45%;
+  height: 60px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#resume-button-2 {
+  width: 150px;
+  height: 100%;
+  border: 2px solid #f4db7d;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-#resume-link-2{
-    width: 50%;
-    height: 80%;
-    border-radius: 10px;
-    background: none;
-    color: #F4DB7D;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-   margin: auto;
-   text-align: center;
-
+#resume-link-2 {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  background: none;
+  color: #f4db7d;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin: auto;
+  text-align: center;
 }
 
-#resume-link-2:hover{
+#resume-link-2:hover {
+  width: 60%;
+  height: 85%;
+}
+.social-media {
+  width: 100%;
+  height: 50px;
+  margin-top: -60px;
+}
+.social-media > div {
+  width: 20%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4db7d;
+  font-size: 20px;
+  gap: 20px;
+}
+.about-me {
+  width: 15%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  color: #f4db7d;
+  background-color: #1a2238;
+  border: 2px solid #f4db7d;
+  border-style: dotted;
+  border-radius: 10px;
+}
+.about-me h1 {
+  font-size: 35px;
+}
+.about-intro {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  flex-wrap: wrap;
+}
+.picture {
+  width: 21%;
+  height: 69%;
+  border-radius: 10%;
+  box-shadow: 0px 0px 15px;
+}
+.picture .home-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.details {
+  width: 50%;
+  height: 40%;
+}
+.details h3 {
+  font-weight: 500;
+  color: #f4db7d;
+}
+.details p {
+  margin-top: 10px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (max-width: 940px) {
+  .about-me {
     width: 60%;
-    height: 85%;
-}  
-.about-me{
-    width:15%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: auto;
-    text-align: center;
-    color: #F4DB7D;
-    background-color: #1A2238; 
-    border: 2px solid #F4DB7D ;
-    border-style: dotted;
-    border-radius: 10px;
-}
-.about-me h1{
-    font-size: 35px;
-
-}
-.about-intro{
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .about-intro {
     width: 100%;
-    height: 70vh;
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-    flex-wrap: wrap;
-}
-.picture{
-    width: 21%;
-    height: 69%;
-    border-radius: 10%;
-    box-shadow:  0px 0px 15px;
-}
-.picture .home-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    cursor: pointer;
-}
-.details{
-    width: 50%;
-    height: 40%; 
-}
-.details h3{
-
-    font-weight: 500;
-    color: #F4DB7D;
-}
-.details p{
+    flex-direction: column;
+  }
+  .details {
+    text-align: center;
+  }
+  #user-detail-intro {
+    width: 300px;
+    margin: auto;
+    text-align: left;
+  }
+  .resume-btn {
+    width: 70%;
+    height: 50px;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+  .resume-btn button {
+    width: 80%;
+    height: 38%;
+    font-size: 15px;
+  }
+  .social-media {
     margin-top: 10px;
-    line-height: 25px;
-    font-size: 18px;
-    font-weight: 400;
-    color:#fff ;
-}
-
-
-@media (max-width: 940px){
-    .about-me{
-        width: 60%;
-        margin: auto;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    .about-intro{
-        width: 100%;
-        height: auto;
-       display: flex;
-       flex-direction: column; 
-    }
-    .details{
-        text-align: center;
-    }
-    #user-detail-intro{
-        width: 280px;
-        margin: auto;
-        border: 2px solid white;
-        text-align: center;
-    }
-    .resume-btn{
-        width: 60%;
-        height: 100px;
-        gap: 20px;
-        flex-direction: column-reverse;
-    }
-    .resume-btn button{
-        width: 80%;
-        height: 48%;
-        font-size: 15px;
-    }
+  }
 }

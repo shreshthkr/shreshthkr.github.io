@@ -1,17 +1,26 @@
 import React from "react";
-import { BiDownArrowAlt } from "react-icons/bi";
+import { BiDownload } from "react-icons/bi";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Shreshth_Kumar_Resume from "../Downloads/Shreshth_Kumar_Resume.pdf";
 import "./About.css";
-//#about.about.section
+
 const About = () => {
-
-
   const handleClick = () => {
-    window.open(
-      "https://drive.google.com/file/d/17dDau_VkHpOI3PPRKfd13BGihtd6CqsD/view?usp=sharing"
-    );
+    const url =
+      "https://drive.google.com/file/d/1g_6YYUTo05E3NcL5S5LDOAJcXPVgwB_I/view?usp=sharing";
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Shreshth_Kumar_Resume.pdf";
+    link.click();
   };
 
+  const handleGit = () => {
+    window.open("https://github.com/shreshthkr");
+  };
+
+  const handleLikedin = () => {
+    window.open("https://www.linkedin.com/in/shreshthkumar1263/");
+  };
 
   return (
     <div className="about section" id="about">
@@ -29,18 +38,22 @@ const About = () => {
               </h3>
             </div>
             <div className="resume-btn">
-              <button id="resume-button-2" >
-                <a
-                  id="resume-link-2"
-                  href={Shreshth_Kumar_Resume}
-                  download="Shreshth_Kumar_Resume"
-                  
-                >
-                  Resume
-                </a>
-              </button>
+              <a
+                id="resume-link-2"
+                href={Shreshth_Kumar_Resume}
+                download="Shreshth_Kumar_Resume"
+              >
+                <button id="resume-button-2" onClick={handleClick}>
+                  <BiDownload fontSize="18px" /> Resume
+                </button>
+              </a>
             </div>
-            {/* <div className='social-media' ></div> */}
+            <div className="social-media">
+              <div>
+                <BsGithub onClick={handleGit} cursor={"pointer"} />
+                <BsLinkedin onClick={handleLikedin} cursor={"pointer"} />
+              </div>
+            </div>
           </div>
         </div>
         <div className="about-me">
@@ -57,10 +70,9 @@ const About = () => {
           <div className="details">
             <h3>I am Shreshth Kumar and I'm a MERN Developer</h3>
             <p id="user-detail-intro">
-              An Enthusiastic Web Developer, a lifelong learner, skilled in
-              front-end Web Development. Knowlwdge of Core React,Javascript, HTML 
-              CSS, express, and MongoDB. High Adaptability to learn new technologies quickly and
-              paying attention to details. Aims to leverage knowledge and build
+              An Enthusiastic Web Developer, skilled in front-end Web
+              Development. Knowlwdge of Core React,Javascript, HTML CSS,
+              express, and MongoDB. Aims to leverage knowledge and build
               world-class websites while facilitating organization in achieving
               functional goals.
             </p>
@@ -72,5 +84,3 @@ const About = () => {
 };
 
 export default About;
-
-// <img class="home-img" src="https://www.linkpicture.com/q/Untitled-design-1_4.jpg" alt="Shreshth-Kumar" />

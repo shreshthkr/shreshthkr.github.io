@@ -19,16 +19,29 @@ const skills = [
     skill: "Chakra-UI",
     img: "https://img.icons8.com/color/256/chakra-ui.png",
   },
-  { id: 6, skill: "Redux", img: "https://img.icons8.com/color/256/redux.png" },
+  {
+    id: 6,
+    skill: "Tailwind",
+    img: "https://img.icons8.com/color/256/tailwind_css.png",
+  },
   {
     id: 7,
     skill: "TypeScript",
     img: "https://img.icons8.com/color/256/typescript.png",
   },
-  { id: 8, skill: "Git", img: "https://img.icons8.com/color/256/git.png" },
+
   { id: 9, skill: "Node", img: "https://img.icons8.com/color/256/nodejs.png" },
-  { id: 10, skill: "ExpressJs", img: "https://www.orafox.com/wp-content/uploads/2019/01/expressjs.png" },
-  { id: 11, skill: "MongoDb", img: "https://img.icons8.com/color/256/mongodb.png" },
+  {
+    id: 10,
+    skill: "ExpressJs",
+    img: "https://www.orafox.com/wp-content/uploads/2019/01/expressjs.png",
+  },
+  {
+    id: 11,
+    skill: "MongoDb",
+    img: "https://img.icons8.com/color/256/mongodb.png",
+  },
+  { id: 12, skill: "Redux", img: "https://img.icons8.com/color/256/redux.png" },
 ];
 
 const Skills = () => {

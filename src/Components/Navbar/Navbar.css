@@ -25,6 +25,7 @@ nav .logo{
     align-items: center;
     justify-content: center;
     margin-right: 30px;
+    font-family: cursive;
 }
 .span{
     color:#FF6A3D ;
@@ -72,21 +73,12 @@ nav .menu-btn{
     justify-content: baseline;
   
 }
-.last_list>button{
-    margin-top: 0px;
-}
+
 #click{
     display: none;
 }
-#resume-link-1{
-    /* display: inline-flex; */
- 
-}
-#resume-button-1{
-    /* width: 100px; */
-    /* display: block; */
-    border: none;
-}
+
+
 @media (max-width: 940px){
     nav{
         width: 100%;

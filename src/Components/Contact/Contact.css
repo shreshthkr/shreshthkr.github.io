@@ -1,173 +1,178 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #1A2238;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a2238;
 }
-.contact-head{
-    width:15%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-align: center;
-    color: #F4DB7D;
-    background-color: #1A2238; 
-    border: 2px solid #F4DB7D ;
-    border-style: dotted;
-    border-radius: 10px;
-    margin-top: 120px;
-    margin-bottom: 100px;
+.contact-head {
+  width: 15%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  color: #f4db7d;
+  background-color: #1a2238;
+  border: 2px solid #f4db7d;
+  border-style: dotted;
+  border-radius: 10px;
+  margin-top: 120px;
+  margin-bottom: 100px;
 }
-.contact-head h1{
-    font-size: 35px;
+.contact-head h1 {
+  font-size: 35px;
 }
-.contact-box{
+.contact-box {
   max-width: 60%;
   width: auto;
   height: 30rem;
-  border: 2px solid #F4DB7D;
+  border: 2px solid #f4db7d;
   margin: auto;
   margin-bottom: 50px;
   border-radius: 15px;
-
 }
-.reach-box{
+.reach-box {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  width: 30rem;
+  height: 25rem;
+}
+input[type="text"],
+select,
+textarea {
+  border: 1px solid#ffff;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+input[type="email"],
+select,
+textarea {
+  border: 1px solid#ffff;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+button {
+  width: 30%;
+  margin: auto;
+  display: block;
+  height: 40px;
+  margin-top: -40px;
+  border: 2px solid #f4db7d;
+  background: transparent;
+  color: #f4db7d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.social {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.personal-contact {
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+#contact-github {
+  color: #f4db7d;
+  font-size: 30px;
+}
+#contact-linkedin {
+  color: #f4db7d;
+  font-size: 30px;
+}
+.phone-icon {
+  color: #f4db7d;
+  font-size: 30px;
+}
+.mail-icon {
+  color: #f4db7d;
+  font-size: 30px;
+}
+#contact-email {
+  font: 15px;
+  color: #f4db7d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+#contact-phone {
+  font: 15px;
+  color: #f4db7d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+a {
+  text-decoration: none;
+}
+@media (max-width: 940px) {
+  .contact-head {
+    width: 20%;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .contact-head h1 {
+    font-size: 18px;
+  }
+  .contact-box {
     width: 90%;
-    height: 90%;
+    margin-bottom: 40px;
+  }
+  .social {
+    margin: auto;
+    margin-top: 20px;
+  }
+  .reach-box {
+    width: 90%;
+    height: auto;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
-.form-box{
-    display: grid;
-     grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-    width: 30rem;
-    height: 25rem;
-}
-input[type=text],select,textarea{
-    border: 1px solid#ffff;
-    border-radius: 10px;
-    height: 40px;
-    font-size: 16px;
-    color: white;
-    font-weight: 600;
-}
-input[type=email],select,textarea{
-    border: 1px solid#ffff;
-    border-radius: 10px;
-    height: 40px;
-    font-size: 16px;
-    color: white;
-    font-weight:600;
-}
-button{
-    width: 30%;
+  }
+  .form-box {
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+  }
+  input[type="text"],
+  select,
+  textarea {
+    height: 30px;
     margin: auto;
-    display: block;
-    height: 40px;
-    margin-top: -40px;
-    border: 2px solid #F4DB7D;
-    background: transparent;
-    color: #F4DB7D;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.social{
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    margin-bottom: 15px;
-
-}
-.personal-contact{
-    height: 80px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-}
-#contact-github{
-    color: #F4DB7D;
-    font-size: 30px;
-}
-#contact-linkedin{
-    color: #F4DB7D;
-    font-size: 30px;
-}
-.phone-icon{
-    color: #F4DB7D;
-    font-size: 30px;
-}
-.mail-icon{
-    color: #F4DB7D;
-    font-size: 30px;
-}
-#contact-email{
-    font: 15px;
-    color: #F4DB7D;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-}
-#contact-phone{
-    font: 15px;
-    color: #F4DB7D;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-}
-a{
-    text-decoration: none;
-}
-@media (max-width: 940px){
-    .contact-head{
-        width: 20%;
-        height: 50px;
-        margin-bottom: 50px;  
-    }
-    .contact-head h1{
-      font-size: 18px;
-    }
-    .contact-box{
-        width: 90%;
-        margin-bottom: 40px;
-    }
-    .social{
-        margin: auto;
-        margin-top: 20px;
-    }
-    .reach-box{
-        width:90%;
-        height: auto;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .form-box{
-        width: 100%;
-        height: 60%;
-        margin-top: 20px;
-        
-    }
-    input[type=text],select,textarea{
-        height: 30px;
-        margin: auto;
-    }
-    input[type=email],select,textarea{
-        height: 30px;
-        margin: auto;
-    }
-    button{
-        margin-top: 30px;
-    }
+  }
+  input[type="email"],
+  select,
+  textarea {
+    height: 30px;
+    margin: auto;
+  }
+  button {
+    margin-top: 30px;
+  }
 }
