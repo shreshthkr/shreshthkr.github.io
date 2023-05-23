@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.c83f2e77.css",
-    "main.js": "/static/js/main.baf4de25.js",
+    "main.css": "/static/css/main.cbd081aa.css",
+    "main.js": "/static/js/main.962bc113.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Shreshth_Kumar_Resume.pdf": "/static/media/Shreshth_Kumar_Resume.ada7fca16f430169f7dd.pdf",
     "index.html": "/index.html",
-    "main.c83f2e77.css.map": "/static/css/main.c83f2e77.css.map",
-    "main.baf4de25.js.map": "/static/js/main.baf4de25.js.map",
+    "main.cbd081aa.css.map": "/static/css/main.cbd081aa.css.map",
+    "main.962bc113.js.map": "/static/js/main.962bc113.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c83f2e77.css",
-    "static/js/main.baf4de25.js"
+    "static/css/main.cbd081aa.css",
+    "static/js/main.962bc113.js"
   ]
 }
