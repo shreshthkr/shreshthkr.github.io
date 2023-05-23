@@ -1,0 +1,80 @@
+#tools{
+     margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%; 
+}
+#tools-heading{
+      margin: auto;
+    text-align: center;
+    font-family:Poppins, sans-serif; 
+}
+#tools-heading h1{
+      color: #1395ba;
+    font-weight: 600;
+}
+.tool-section{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px; 
+}
+.tools-card{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+   
+}
+#tool-logo{
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    margin-top: 10px; 
+}
+#tool-logo img {
+    width: 80px;
+    height: 90%;
+    display: block;
+    margin: auto;
+  }
+  #tool-logo img:hover {
+    cursor: pointer;
+  } 
+  .tool-title{
+    color: #444444;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+  }
+  .tool-title p:hover {
+    color: #1395ba;
+    cursor: pointer;
+  }
+  .tools-card:hover{
+    box-shadow: rgba(71, 182, 246, 0.25) 0px 54px 55px, rgba(7, 170, 252, 0.12) 0px -12px 30px, rgba(6, 164, 255, 0.12) 0px 4px 6px, rgba(2, 196, 255, 0.17) 0px 12px 13px, rgba(0, 195, 255, 0.09) 0px -3px 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    .tool-section{
+      width: 90%;
+      margin: auto;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 767px){
+    .tool-section{
+      width: 90%;
+      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

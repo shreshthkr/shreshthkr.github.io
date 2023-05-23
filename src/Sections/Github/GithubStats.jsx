@@ -1,24 +1,28 @@
-import React from "react";
+import React from 'react'
 import "./GithubStats.css";
 import GitHubCalendar from "react-github-calendar";
 const GithubStats = () => {
+    
   return (
-    <div>
-      <div className="github-head">
-        <h1>GitHub</h1>
-      </div>
-      <div className="Github-calendar">
+    <>
+      <div id='github'>
+      <div id="github-heading">
+            <h1>Github <span>Submissions</span></h1>
+        </div>
+        <div className="Github-calendar">
         <h1 className="Calendar">GitHub Calendar</h1>
+
         <GitHubCalendar
           username="shreshthkr"
           blockSize={15}
           blockMargin={5}
-          fontSize={16}
+          fontSize={18}
           margin="auto"
         />
       </div>
-      <div>
-        <h1 className="stats-head">GitHub Stats</h1>
+      <div id="stats-heading">
+            <h1>Github <span>Stats</span></h1>
+        </div>
         <div className="github-streaks">
           <div id="github-streak-stats-div">
             <img
@@ -43,8 +47,9 @@ const GithubStats = () => {
           />
         </div>
       </div>
-    </div>
-  );
-};
+      
+    </>
+  )
+}
 
 export default GithubStats;

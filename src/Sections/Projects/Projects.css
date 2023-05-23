@@ -1,0 +1,213 @@
+#projects{
+    margin-top: 100px;
+   margin-bottom: 50px;
+   width: 100%; 
+}
+#project-heading{
+     margin: auto;
+   text-align: center;
+   font-family:Poppins, sans-serif; 
+}
+#project-heading h1{
+    font-size: 28px;
+     color: #1395ba;
+   font-weight: 600;
+}
+.my_projects{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .project-card {
+    width: 100%;
+    height: 28rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #444444;
+    gap: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .project-card img {
+    width: 100%;
+    margin: auto;
+    transition: width 5s;
+    border-radius: 10px;
+  }
+.project-card img:hover {
+    transform: scale(1.08); /* or whatever scale factor you prefer */
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  .project-description p{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family:Poppins, sans-serif; 
+    text-align: center;  
+  } 
+.project-tech-stack p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family:Poppins, sans-serif; 
+    text-align: center; 
+    color: #1395ba;
+}
+  .project-image{
+    width: 45%;
+  }
+  .project-links {
+    width: 20%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  } 
+  .project-links button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }  
+  .project-deployed-link{
+    color: #21cec0;
+  } 
+  .project-info{
+    width: 40%;
+  }
+  .project-title h2{
+      color: #1395ba;
+      font-family:Poppins, sans-serif;
+      font-weight: 600; 
+  }
+ 
+  .project-card2 {
+    width: 100%;
+    height: 28rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    color: #444444;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .project-card2 img {
+    width: 100%;
+    margin: auto;
+    transition: width 5s;
+    border-radius: 10px;
+  }
+.project-card2 img:hover {
+    transform: scale(1.08); /* or whatever scale factor you prefer */
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  .project-description2 p{
+     width: 100%;
+     font-size: 15px;
+     font-weight: 600;
+     font-family:Poppins, sans-serif; 
+     text-align: center;
+  } 
+  .project-tech-stack2 p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family:Poppins, sans-serif; 
+    text-align: center; 
+    color: #1395ba;
+}
+  .project-image2{
+    width: 45%;
+  }
+  .project-links2 {
+    width: 20%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  } 
+  .project-links2 button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }  
+  .project-deployed-link2{
+    color: #21cec0;
+  }    
+  .project-info2{
+    width: 45%;
+
+  }
+
+  .project-title2 h2{
+    color: #1395ba;
+    font-family:Poppins, sans-serif;
+    font-weight: 600; 
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .my_projects{
+    width: 90%;
+    margin: auto;
+  }
+  .project-links{
+    width: 50%;
+  } 
+  .project-links2{
+    width: 50%;
+  } 
+ 
+}
+@media screen and (max-width: 767px){
+  .my_projects{
+    width: 90%;
+    margin: auto;
+  }
+  .project-links{
+    width: 50%;
+  } 
+  .project-links2{
+    width: 50%;
+  }
+  .project-image{
+    width: 90%;
+    height: 50%;
+  }
+  .project-image2{
+    width: 90%;
+    height: 50%;
+  }
+  .project-info{
+    width: 90%;
+  }
+  .project-info2{
+    width: 90%;
+  }
+  .project-description p{
+    width: 90%;
+  }
+  .project-card{
+    flex-direction: column;
+    height: auto;
+  }
+  .project-card2{
+    flex-direction: column;
+    height: auto;
+  } 
+}
