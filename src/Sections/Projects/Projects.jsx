@@ -41,7 +41,7 @@ const Projects = () => {
       };
     
       const beDem = () => {
-        window.open("https://delicate-mooncake-6ba932.netlify.app/");
+        window.open("https://frontend-eight-ashen-60.vercel.app/");
       };
     
   return (
