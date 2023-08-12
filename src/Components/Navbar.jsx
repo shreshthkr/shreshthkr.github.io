@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1g_6YYUTo05E3NcL5S5LDOAJcXPVgwB_I/view?usp=sharing"
+      "https://drive.google.com/file/d/1-3GZ8farHv2H23YBYHZ2s7yklfWflWrd/view?usp=drive_link"
     );
     onClose();
   };

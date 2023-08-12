@@ -10,7 +10,7 @@ import Shreshth_Kumar_Resume from "../../Components/Downloads/Shreshth_Kumar_Res
 const Home = () => {
   const handleClick = () => {
     const url =
-      "https://drive.google.com/file/d/1g_6YYUTo05E3NcL5S5LDOAJcXPVgwB_I/view?usp=sharing";
+      "https://drive.google.com/file/d/1-3GZ8farHv2H23YBYHZ2s7yklfWflWrd/view?usp=drive_link";
     const link = document.createElement("a");
     link.href = url;
     link.download = "Shreshth_Kumar_Resume.pdf";

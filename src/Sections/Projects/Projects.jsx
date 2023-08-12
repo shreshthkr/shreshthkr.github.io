@@ -67,7 +67,7 @@ const Projects = () => {
             </p>
           </div>
           <div className="project-tech-stack">
-          <p>Tech-Stack: HTML | CSS | React | Chakra-UI | Redux</p>
+          <p>Tech-Stack: HTML | CSS | React | Chakra-UI | Redux | Express.js | MongoDB | Mongoose</p>
           </div>
           <div className="project-links">
             <button className="project-github-link" onClick={beGit}>
