@@ -2,6 +2,12 @@ import React from 'react';
 import "./Projects.css";
 import {BsGithub} from "react-icons/bs";
 import {SiNetlify} from "react-icons/si";
+import Craftsvilla from "./Craftsvilla.png";
+import Urbancompany from "./Urbancompany.png";
+import StyleCraze from "./StyleCraze.png";
+import Expedia from "./Expedia.png";
+import Befour from "./Befour.png";
+import DMAS from "./DMAS.png";
 const Projects = () => {
     const styleDem = () => {
         window.open("https://genuine-mousse-0f20e2.netlify.app/");
@@ -27,7 +33,14 @@ const Projects = () => {
           "https://639fa5d018290c7021ff4b09--nimble-jelly-7dbf24.netlify.app/"
         );
       };
-    
+      const dmasGit = () => {
+        window.open("https://github.com/shreshthkr/mas_game");
+      };
+      const dmasDem = () => {
+        window.open(
+          "https://dmas-game.vercel.app/"
+        );
+      };
       const craftsGit = () => {
         window.open("https://github.com/shreshthkr/defective-week-6965");
       };
@@ -53,7 +66,7 @@ const Projects = () => {
          <div className='my_projects'>
             <div className='project-card'>
                 <div className='project-image'>
-                    <img src="https://www.linkpicture.com/q/Screenshot-804.png" alt="Befour.com" />
+                    <img src={Befour} alt="Befour.com" />
                 </div>
                 <div className='project-info'>
                 <div className='project-title'>
@@ -83,7 +96,7 @@ const Projects = () => {
             <div className="project-card2">
           <div className="project-image2">
             <img
-              src="https://www.linkpicture.com/q/Screenshot-763_1.png"
+              src={Craftsvilla}
               alt=""
             />
           </div>
@@ -113,90 +126,119 @@ const Projects = () => {
         <div className="project-card">
           <div className="project-image">
             <img
-              src="https://www.linkpicture.com/q/Screenshot-764.png"
-              alt=""
+              src={DMAS}
+              alt="DMAS"
             />
           </div>
           <div className='project-info'>
           <div className="project-title">
-            <h2>Urban Company</h2>
+            <h2>DMAS Game</h2>
           </div>
           <div className="project-description">
+            <p>
+            It is a Mathematical Operation Game, the name Dmas is derived from BODMAS, It is designed to help students learn and practice mathematics while playing.
+            </p>
+          </div>
+          <div className="project-tech-stack">
+            <p>Tech-Stack: React | TypeScript | Tailwind CSS </p>
+          </div>
+          <div className="project-links">
+            <button className="project-github-link" onClick={dmasGit}>
+            <BsGithub />
+            </button>
+            <button className="project-deployed-link" onClick={dmasDem}>
+              <SiNetlify />
+            </button>
+          </div>
+          </div>
+          </div>
+        <div className="project-card2">
+          <div className="project-image2">
+            <img
+              src={Urbancompany}
+              alt="Urban Company"
+            />
+          </div>
+          <div className='project-info2'>
+          <div className="project-title2">
+            <h2>Urban Company</h2>
+          </div>
+          <div className="project-description2">
             <p>
               It is a clone of UrbanCompany website which is an online platform
               that connects customers with service professionals for home and
               personal services.
             </p>
           </div>
-          <div className="project-tech-stack">
+          <div className="project-tech-stack2">
             <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
           </div>
-          <div className="project-links">
-            <button className="project-github-link" onClick={urbanGit}>
+          <div className="project-links2">
+            <button className="project-github-link2" onClick={urbanGit}>
             <BsGithub />
             </button>
-            <button className="project-deployed-link" onClick={urbanDem}>
+            <button className="project-deployed-link2" onClick={urbanDem}>
               <SiNetlify />
             </button>
           </div>
           </div>
           </div>
-          <div className="project-card2">
+          <div className="project-card">
+          <div className="project-image">
+            <img
+              src={Expedia}
+              alt="Expedia.com"
+            />
+          </div>
+          <div className='project-info'>
+          <div className="project-title">
+            <h2>Expedia.com</h2>
+          </div>
+          <div className="project-description">
+            <p>
+              Expedia.com is an E-commerce website that deals with travel
+              packages. A variety of services are available through the website.
+            </p>
+          </div>
+          <div className="project-tech-stack">
+            <p>Tech-Stack: HTML | CSS | JavaScript </p>
+          </div>
+          <div className="project-links">
+            <button className="project-github-link" onClick={expGit}>
+            <BsGithub />
+            </button>
+            <button className="project-deployed-link" onClick={expDem}>
+              <SiNetlify />
+            </button>
+          </div>
+        </div>
+        </div>
+        <div className="project-card2">
           <div className="project-image2">
             <img
-              src="https://www.linkpicture.com/q/Screenshot-768_1.png"
-              alt="Expedia.com"
+              src={StyleCraze}
+              alt="Style-Craze"
             />
           </div>
           <div className='project-info2'>
           <div className="project-title2">
-            <h2>Expedia.com</h2>
+            <h2>StyleCraze</h2>
           </div>
           <div className="project-description2">
             <p>
-              Expedia.com is an E-commerce website that deals with travel
-              packages. A variety of services are available through the website.
+              It is a clone website of stylecraze which deals in all kinds of
+              women products and problems
             </p>
           </div>
           <div className="project-tech-stack2">
             <p>Tech-Stack: HTML | CSS | JavaScript </p>
           </div>
           <div className="project-links2">
-            <button className="project-github-link2" onClick={expGit}>
-            <BsGithub />
-            </button>
-            <button className="project-deployed-link2" onClick={expDem}>
-              <SiNetlify />
-            </button>
-          </div>
-        </div>
-        </div>
-        <div className="project-card">
-          <div className="project-image">
-            <img
-              src="https://www.linkpicture.com/q/Screenshot-766_1.png"
-              alt="Style-Craze"
-            />
-          </div>
-          <div className='project-info'>
-          <div className="project-title">
-            <h2>StyleCraze</h2>
-          </div>
-          <div className="project-description">
-            <p>
-              It is a clone website of stylecraze which deals in all kinds of
-              women products and problems
-            </p>
-          </div>
-          <div className="project-tech-stack">
-            <p>Tech-Stack: HTML | CSS | JavaScript </p>
-          </div>
-          <div className="project-links">
-            <button className="project-github-link" onClick={styleGit}>
+            <button className="project-github-link2" onClick={styleGit}>
             <BsGithub />
             </button>
 
-            <button className="project-deployed-link" onClick={styleDem}>
+            <button className="project-deployed-link2" onClick={styleDem}>
               <SiNetlify />
             </button>
           </div>

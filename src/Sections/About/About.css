@@ -26,6 +26,8 @@
     font-family:Poppins, sans-serif;
     color: #444444;
     text-align: left;
+    word-spacing: 5px;
+    line-height: 30px;
 }
 #profile-pic{
     height: 297px;
