@@ -1,0 +1,107 @@
+#experience {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.exp-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.exp-heading span {
+  color: #0097b2; /* Same blue as your name in hero section */
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exp-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.exp-header {
+  margin-bottom: 15px;
+}
+
+.exp-role {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0097b2;
+}
+
+.exp-company {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.exp-duration {
+  font-size: 0.95rem;
+  color: #777;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.exp-points {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #444;
+}
+
+.exp-points li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exp-heading {
+    font-size: 1.8rem;
+  }
+
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-role {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #experience {
+    padding: 40px 15px;
+  }
+
+  .exp-heading {
+    font-size: 1.6rem;
+  }
+
+  .exp-role {
+    font-size: 1rem;
+  }
+
+  .exp-points li {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,94 @@
+#github-heading{
+    margin: auto;
+    text-align: center;
+    font-family:Poppins, sans-serif;
+}
+#github-heading h1{
+    color: #444444;
+    font-weight: 600;
+}
+#github-heading h1 span{
+  color: #1395ba;
+}
+.Github-calendar{
+    width: 80%;
+    height: 300px;
+    margin: auto; 
+    background-color: #1395ba;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.Calendar{
+    font-family:Poppins, sans-serif;
+    color: #444444;
+    font-weight: 700; 
+}
+#stats-heading{
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-family:Poppins, sans-serif;
+}
+#stats-heading h1{
+    color: #444444;
+    font-weight: 600;
+}
+#stats-heading h1 span{
+  color: #1395ba;
+}
+.github-streaks{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#github-top-langs-div{
+    width: 50%;
+    height: 180px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#github-top-langs-div img{
+    height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .Github-calendar{
+    width: 90%;
+  }
+  .github-streaks{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px){
+.Github-calendar{
+        width: 90%;
+      }
+.github-streaks{
+flex-direction: column;
+ width: 90%;
+ margin: auto;      
+}
+#github-streak-stats-div{
+width: 100%;
+margin: auto;
+}
+#github-streak-stats-div img{
+  width: 100%;
+}
+#github-stats-card-div{
+  width: 100%;
+margin: auto;
+}
+#github-stats-card-div img{
+   width: 100%;
+}
+}
