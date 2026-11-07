@@ -1,55 +1,61 @@
-import React from 'react'
+import React from "react";
 import "./GithubStats.css";
 import GitHubCalendar from "react-github-calendar";
-const GithubStats = () => {
-    
-  return (
-    <>
-      <div id='github'>
-      <div id="github-heading">
-            <h1>Github <span>Submissions</span></h1>
-        </div>
-        <div className="Github-calendar">
-        <h1 className="Calendar">GitHub Calendar</h1>
+import Reveal from "../../Components/Reveal";
+import { HiArrowUpRight } from "react-icons/hi2";
 
-        <GitHubCalendar
-          username="shreshthkr"
-          blockSize={15}
-          blockMargin={5}
-          fontSize={18}
-          margin="auto"
-        />
-      </div>
-      <div id="stats-heading">
-            <h1>Github <span>Stats</span></h1>
+const GithubStats = () => {
+  return (
+    <section id="github" className="section section--light gh">
+      <div className="inner">
+        <div className="gh__top">
+          <div className="gh__intro">
+            <Reveal>
+              <span className="eyebrow">Activity</span>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h2 className="section-title">
+                Building <span className="muted">in public</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="gh__lead">
+                A steady cadence of commits — shipping, refining and learning in
+                the open.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.1}>
+            <a
+              className="gh__profile"
+              href="https://github.com/shreshthkr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @shreshthkr <HiArrowUpRight aria-hidden="true" />
+            </a>
+          </Reveal>
         </div>
-        <div className="github-streaks">
-          <div id="github-streak-stats-div">
-            <img
-              id="github-streak-stats"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=shreshthkr&theme=radical"
-              alt="github streak"
+
+        <Reveal delay={0.1} className="gh__panel">
+          <span className="gh__panel-label">Contribution Graph · Last 12 months</span>
+          <div className="gh__calendar-wrap">
+            <GitHubCalendar
+              username="shreshthkr"
+              blockSize={13}
+              blockMargin={4}
+              fontSize={13}
+              colorScheme="dark"
+              theme={{
+                dark: ["#12212a", "#164554", "#1b7889", "#38afbd", "#8ceef7"],
+              }}
             />
           </div>
-          <div id="github-stats-card-div">
-            <img
-              id="github-stats-card"
-              src="https://github-readme-stats.vercel.app/api?username=shreshthkr&show_icons=true&theme=radical"
-              alt="stats"
-            />
-          </div>
-        </div>
-        <div id="github-top-langs-div">
-          <img
-            id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs?username=shreshthkr&show_icons=true&locale=en&layout=compact"
-            alt="Most used lang"
-          />
-        </div>
+        </Reveal>
       </div>
-      
-    </>
-  )
-}
+    </section>
+  );
+};
 
 export default GithubStats;

@@ -1,107 +1,113 @@
-#experience {
-  background-color: #ffffff;
-  color: #333333;
-  padding: 60px 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.exp-heading {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-.exp-heading span {
-  color: #0097b2; /* Same blue as your name in hero section */
-}
-
-.exp-container {
+.exp__top {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 1.25rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
-.exp-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.exp__list {
+  border-top: 1px solid var(--line);
 }
 
-.exp-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+/* Each entry: mono meta rail + serif body */
+.exp__item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 2fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding: clamp(2.25rem, 4vw, 3.25rem) 0;
+  border-bottom: 1px solid var(--line);
+  transition: opacity 0.4s var(--ease);
 }
 
-.exp-header {
-  margin-bottom: 15px;
+.exp__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
-
-.exp-role {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #0097b2;
-}
-
-.exp-company {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 4px;
-}
-
-.exp-duration {
-  font-size: 0.95rem;
-  color: #777;
+.exp__index {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   font-weight: 500;
-  margin-top: 2px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  transition: color 0.4s var(--ease);
 }
-
-.exp-points {
-  margin-top: 10px;
-  padding-left: 20px;
-  color: #444;
+.exp__item:hover .exp__index {
+  color: var(--accent);
 }
-
-.exp-points li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+.exp__duration {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.exp__company {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.4rem;
   font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.exp__location {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .exp-heading {
-    font-size: 1.8rem;
-  }
-
-  .exp-card {
-    padding: 20px;
-  }
-
-  .exp-role {
-    font-size: 1.1rem;
-  }
+.exp__body {
+  display: flex;
+  flex-direction: column;
+}
+.exp__role {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.exp__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 56ch;
+}
+.exp__points li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: clamp(0.92rem, 1.1vw, 1rem);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.exp__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--text-faint);
 }
 
-@media (max-width: 480px) {
-  #experience {
-    padding: 40px 15px;
+@media (max-width: 760px) {
+  .exp__item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  .exp-heading {
-    font-size: 1.6rem;
+  .exp__meta {
+    flex-flow: row wrap;
+    align-items: baseline;
+    gap: 0.5rem 1.25rem;
   }
-
-  .exp-role {
-    font-size: 1rem;
-  }
-
-  .exp-points li {
-    font-size: 0.9rem;
+  .exp__company {
+    flex-basis: 100%;
+    margin-top: 0;
   }
 }

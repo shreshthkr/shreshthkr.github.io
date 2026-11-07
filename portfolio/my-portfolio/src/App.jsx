@@ -1,24 +1,34 @@
-import './App.css';
-import Navbar from './Components/Navbar';
-import About from './Sections/About/About';
-import Contact from './Sections/Contact/Contact';
-import Experience from './Sections/Experience/Experience';
-import GithubStats from './Sections/Github/GithubStats';
-import Home from './Sections/Home/Home';
-import Projects from './Sections/Projects/Projects';
-import Skills from './Sections/Skills/Skills';
+import "./App.css";
+import { MotionConfig } from "framer-motion";
+import Navbar from "./Components/Navbar";
+import Home from "./Sections/Home/Home";
+import About from "./Sections/About/About";
+import Experience from "./Sections/Experience/Experience";
+import Projects from "./Sections/Projects/Projects";
+import Skills from "./Sections/Skills/Skills";
+import GithubStats from "./Sections/Github/GithubStats";
+import Contact from "./Sections/Contact/Contact";
+import "./lab.css";
+import SystemFrame from "./Components/SystemFrame";
+import "./responsive.css";
+import "./enhancements.css";
+
 function App() {
   return (
-    <div className="App">
+    <MotionConfig reducedMotion="user"><div className="App">
+      <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
-     <Home />
-     <About />
-     <Experience />
-     <Skills />
-     <Projects />
-     <GithubStats />
-     <Contact />
-    </div>
+      <SystemFrame />
+      <main id="main">
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Skills />
+      <GithubStats />
+      <Contact />
+      </main>
+    </div></MotionConfig>
   );
 }
 

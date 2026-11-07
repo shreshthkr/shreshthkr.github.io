@@ -1,254 +1,41 @@
-import React from 'react';
-import "./Projects.css";
-import {BsGithub} from "react-icons/bs";
-import {SiNetlify} from "react-icons/si";
-import Craftsvilla from "./Craftsvilla.png";
-import Urbancompany from "./Urbancompany.png";
-import StyleCraze from "./StyleCraze.png";
-import Expedia from "./Expedia.png";
-import Befour from "./Befour.png";
-import DMAS from "./DMAS.png";
-const Projects = () => {
-    const styleDem = () => {
-        window.open("https://genuine-mousse-0f20e2.netlify.app/");
-      };
-    
-      const styleGit = () => {
-        window.open("https://github.com/shreshthkr/polite-design-6184");
-      };
-    
-      const expGit = () => {
-        window.open("https://github.com/Shubham-Dandekar/expedia.com-clone");
-      };
-    
-      const expDem = () => {
-        window.open("https://clone-expedia.netlify.app/");
-      };
-    
-      const urbanGit = () => {
-        window.open("https://github.com/shreshthkr/overrated-clam-5001");
-      };
-      const urbanDem = () => {
-        window.open(
-          "https://639fa5d018290c7021ff4b09--nimble-jelly-7dbf24.netlify.app/"
-        );
-      };
-      const dmasGit = () => {
-        window.open("https://github.com/shreshthkr/mas_game");
-      };
-      const dmasDem = () => {
-        window.open(
-          "https://dmas-game.vercel.app/"
-        );
-      };
-      const craftsGit = () => {
-        window.open("https://github.com/shreshthkr/defective-week-6965");
-      };
-    
-      const craftsDem = () => {
-        window.open("https://coruscating-mooncake-55a32f.netlify.app/");
-      };
-    
-      const beGit = () => {
-        window.open("https://github.com/atheist31/legit-substance-7075");
-      };
-    
-      const beDem = () => {
-        window.open("https://frontend-eight-ashen-60.vercel.app/");
-      };
-    
-  return (
-    <>
-      <div id='projects'>
-      <div id="project-heading">
-            <h1>Projects</h1>
-        </div>
-         <div className='my_projects'>
-            <div className='project-card'>
-                <div className='project-image'>
-                    <img src={Befour} alt="Befour.com" />
-                </div>
-                <div className='project-info'>
-                <div className='project-title'>
-                    <h2>Befour.com</h2>
-                </div>
-                <div className="project-description">
-            <p>
-            It is a clone of Bewakoof.com website which is an e-commerce
-              platform for products related to clothing like T-shirt, Shirts
-              Kurta and many more options.
-            </p>
-          </div>
-          <div className="project-tech-stack">
-          <p>Tech-Stack: HTML | CSS | React | Chakra-UI | Redux | Express.js | MongoDB | Mongoose</p>
-          </div>
-          <div className="project-links">
-            <button className="project-github-link" onClick={beGit}>
-              <BsGithub />
-            </button>
-
-            <button className="project-deployed-link" onClick={beDem}>
-             <SiNetlify />
-            </button>
-          </div>
-          </div>
-            </div>
-            <div className="project-card2">
-          <div className="project-image2">
-            <img
-              src={Craftsvilla}
-              alt=""
-            />
-          </div>
-          <div className='project-info2'>
-          <div className="project-title2">
-            <h2>CraftsVilla</h2>
-          </div>
-          <div className="project-description2">
-            <p>
-              It is a clone of Craftsvilla website which is an e-commerce
-              platform for products related to Home-Decor.
-            </p>
-          </div>
-          <div className="project-tech-stack2">
-            <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
-          </div>
-          <div className="project-links2">
-            <button className="project-github-link2" onClick={craftsGit}>
-            <BsGithub />
-            </button>
-            <button className="project-deployed-link2" onClick={craftsDem}>
-              <SiNetlify />
-            </button>
-          </div>
-          </div>
-        </div>
-        <div className="project-card">
-          <div className="project-image">
-            <img
-              src={DMAS}
-              alt="DMAS"
-            />
-          </div>
-          <div className='project-info'>
-          <div className="project-title">
-            <h2>DMAS Game</h2>
-          </div>
-          <div className="project-description">
-            <p>
-            It is a Mathematical Operation Game, the name Dmas is derived from BODMAS, It is designed to help students learn and practice mathematics while playing.
-            </p>
-          </div>
-          <div className="project-tech-stack">
-            <p>Tech-Stack: React | TypeScript | Tailwind CSS </p>
-          </div>
-          <div className="project-links">
-            <button className="project-github-link" onClick={dmasGit}>
-            <BsGithub />
-            </button>
-            <button className="project-deployed-link" onClick={dmasDem}>
-              <SiNetlify />
-            </button>
-          </div>
-          </div>
-          </div>
-        <div className="project-card2">
-          <div className="project-image2">
-            <img
-              src={Urbancompany}
-              alt="Urban Company"
-            />
-          </div>
-          <div className='project-info2'>
-          <div className="project-title2">
-            <h2>Urban Company</h2>
-          </div>
-          <div className="project-description2">
-            <p>
-              It is a clone of UrbanCompany website which is an online platform
-              that connects customers with service professionals for home and
-              personal services.
-            </p>
-          </div>
-          <div className="project-tech-stack2">
-            <p>Tech-Stack: HTML | CSS | React | Chakra-UI</p>
-          </div>
-          <div className="project-links2">
-            <button className="project-github-link2" onClick={urbanGit}>
-            <BsGithub />
-            </button>
-            <button className="project-deployed-link2" onClick={urbanDem}>
-              <SiNetlify />
-            </button>
-          </div>
-          </div>
-          </div>
-          <div className="project-card">
-          <div className="project-image">
-            <img
-              src={Expedia}
-              alt="Expedia.com"
-            />
-          </div>
-          <div className='project-info'>
-          <div className="project-title">
-            <h2>Expedia.com</h2>
-          </div>
-          <div className="project-description">
-            <p>
-              Expedia.com is an E-commerce website that deals with travel
-              packages. A variety of services are available through the website.
-            </p>
-          </div>
-          <div className="project-tech-stack">
-            <p>Tech-Stack: HTML | CSS | JavaScript </p>
-          </div>
-          <div className="project-links">
-            <button className="project-github-link" onClick={expGit}>
-            <BsGithub />
-            </button>
-            <button className="project-deployed-link" onClick={expDem}>
-              <SiNetlify />
-            </button>
-          </div>
-        </div>
-        </div>
-        <div className="project-card2">
-          <div className="project-image2">
-            <img
-              src={StyleCraze}
-              alt="Style-Craze"
-            />
-          </div>
-          <div className='project-info2'>
-          <div className="project-title2">
-            <h2>StyleCraze</h2>
-          </div>
-          <div className="project-description2">
-            <p>
-              It is a clone website of stylecraze which deals in all kinds of
-              women products and problems
-            </p>
-          </div>
-          <div className="project-tech-stack2">
-            <p>Tech-Stack: HTML | CSS | JavaScript </p>
-          </div>
-          <div className="project-links2">
-            <button className="project-github-link2" onClick={styleGit}>
-            <BsGithub />
-            </button>
-
-            <button className="project-deployed-link2" onClick={styleDem}>
-              <SiNetlify />
-            </button>
-          </div>
-        </div>
-        </div>
-        </div>
-         </div>
-      
-    </>
-  )
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { BsGithub } from 'react-icons/bs';
+import { HiArrowUpRight } from 'react-icons/hi2';
+import { projects } from './projectData';
+import './Projects.css';
+import './Spiral.css';
+const HelixScene=lazy(()=>import('./HelixScene'));
+const agents=['J.A.R.V.I.S.','F.R.I.D.A.Y.','E.D.I.T.H.','K.A.R.E.N.','J.O.C.A.S.T.A.','D.U.M–E'];
+const query='(max-width: 1024px), (max-height: 650px), (prefers-reduced-motion: reduce)';
+export default function Projects(){
+ const section=useRef(null),progress=useRef(0),touch=useRef(null);
+ const [active,setActive]=useState(0),[compact,setCompact]=useState(()=>window.matchMedia(query).matches);
+ const reduced=useReducedMotion();
+ const near=useInView(section,{margin:"400px",once:true});
+ useEffect(()=>{const media=window.matchMedia(query);const change=()=>setCompact(media.matches);media.addEventListener('change',change);return()=>media.removeEventListener('change',change);},[]);
+ useEffect(()=>{
+  if(compact)return;let frame;
+  const update=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{const rect=section.current.getBoundingClientRect();const p=Math.max(0,Math.min(1,-rect.top/(section.current.offsetHeight-window.innerHeight)));progress.current=p;setActive(Math.min(5,Math.floor(p*6)));});};
+  window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update();
+  return()=>{cancelAnimationFrame(frame);window.removeEventListener('scroll',update);window.removeEventListener('resize',update);};
+ },[compact]);
+ function select(index){
+  if(compact){progress.current=(index+.3)/6;setActive(index);return;}
+  const top=window.scrollY+section.current.getBoundingClientRect().top;const length=section.current.offsetHeight-window.innerHeight;
+  window.scrollTo({top:top+(index+.3)/6*length,behavior:reduced?'instant':'smooth'});
+ }
+ const p=projects[active];
+ return <section id="projects" className="spiral-projects" ref={section} aria-label="Featured Projects — 3D spiral archive"><div className="spiral-stage">
+  <div className="spiral-visual" onTouchStart={e=>{touch.current={x:e.touches[0].clientX,y:e.touches[0].clientY};}} onTouchEnd={e=>{if(!compact||!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x,dy=e.changedTouches[0].clientY-touch.current.y;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))select(Math.max(0,Math.min(5,active+(dx<0?1:-1))));touch.current=null;}}>{near && <Suspense fallback={<div className="helix-fallback"/>}><HelixScene projects={projects} progress={progress} reduced={reduced} active={active}/></Suspense>}</div>
+  <div className="spiral-shade"/>
+  <header className="spiral-heading"><div><span className="eyebrow">Selected Work / Project archive</span><h2>Inside the<br/><span>architecture.</span></h2></div><a className="projects__viewall" href="https://github.com/shreshthkr" target="_blank" rel="noopener noreferrer">View all on GitHub <HiArrowUpRight/></a></header>
+  <div className="spiral-readout" aria-hidden="true"><span>HELICAL ARCHIVE / 06 STATIONS</span><span>{compact?'SWIPE OR SELECT A PROJECT':'SCROLL TO ROTATE ↓'}</span></div>
+  <div className="spiral-detail"><div className="agent-heading"><span className="agent-light"/><span>INTERFACE / {agents[active]}</span><span>0{active+1} / 06</span></div>
+   <motion.article key={p.title} initial={{opacity:reduced?1:0,y:reduced?0:10}} animate={{opacity:1,y:0}} transition={{duration:.25}}><span className="spiral-project-label">PROJECT FILE — 0{active+1}</span><h3>{p.title}</h3><p>{p.description}</p><ul className="spiral-tech">{p.tech.map(t=><li key={t}>{t}</li>)}</ul><div className="spiral-actions"><a href={p.demo} target="_blank" rel="noopener noreferrer">Launch project <HiArrowUpRight/></a><a href={p.github} target="_blank" rel="noopener noreferrer"><BsGithub/> Source code</a></div></motion.article>
+   <div className="spiral-detail__footer"><span>Themed interfaces · Original projects</span><span aria-hidden="true">⌁</span></div>
+  </div>
+  <nav className="spiral-selector" aria-label="Select a project">{projects.map((project,i)=><button key={project.title} onClick={()=>select(i)} aria-current={active===i?'step':undefined} aria-label={`Show ${project.title}`}><span>0{i+1}</span><span>{project.title}</span><i/></button>)}</nav>
+  <div className="spiral-bottom"><span>SHRESHTH / ENGINEERING SYSTEMS</span><span>{compact?'SELECT A PROJECT ABOVE':'SCROLL TO EXPLORE ALL PROJECTS ↓'}</span></div>
+ </div></section>;
 }
-
-export default Projects;

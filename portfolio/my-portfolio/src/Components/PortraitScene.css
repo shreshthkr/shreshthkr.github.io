@@ -1,0 +1,36 @@
+/* One full-bleed portrait scene; all biography content follows below. */
+.about.section{padding-top:0;background:#071019;overflow:hidden}
+.portrait-scene{position:relative;isolation:isolate;margin:0 calc(-1 * var(--pad)) clamp(60px,7vw,110px);width:calc(100% + var(--pad)*2);height:clamp(720px,94svh,1100px);background:#071019;overflow:hidden}
+.portrait-scene__atmosphere{position:absolute;inset:0;background:radial-gradient(ellipse at 38% 47%,#11728a24,transparent 52%),radial-gradient(ellipse at 82% 70%,#c4353512,transparent 45%),#071019}
+.portrait-scene__image{position:absolute;z-index:1;height:100%;width:auto;max-width:none;left:50%;translate:-50% 0;object-fit:contain;mask-image:linear-gradient(0deg,transparent,#000 14%,#000 95%,transparent),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in;filter:drop-shadow(0 0 60px #17849b12)}
+.portrait-scene__coordinates{position:absolute;left:var(--pad);right:var(--pad);top:35px;z-index:4;display:flex;justify-content:space-between;gap:20px;font:.55rem var(--font-mono);letter-spacing:.13em;color:var(--text-faint)}
+.portrait-scene__coordinates>span:first-child{color:var(--accent)}
+.portrait-scene__lightning{position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none;mask-image:linear-gradient(90deg,#000 15%,#000 30%,transparent 43%,transparent 57%,#000 70%,#000 85%)}
+.portrait-scene__bolt-halo{stroke:#1aaeff;stroke-width:7;opacity:.65}
+.portrait-scene__bolt-main{stroke:#b2faff;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100 50 220 650;stroke-dashoffset:0;animation:portrait-current 8s linear infinite}
+.portrait-scene__bolt-main path:nth-child(2){animation:portrait-current 11s linear infinite reverse}
+.portrait-scene__bolt-branches{stroke:#54d6ff;stroke-width:1;opacity:.55;stroke-dasharray:35 70 50 300;animation:portrait-current 10s linear infinite reverse}
+.portrait-scene__edge{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(0deg,#071019,transparent 25%,transparent 92%,#07101988)}
+.portrait-scene__caption{position:absolute;z-index:4;bottom:90px;left:var(--pad);right:var(--pad);display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.portrait-scene__caption>div{display:flex;flex-direction:column;gap:10px}
+.portrait-scene__caption strong{font:500 clamp(1.4rem,2.5vw,2.2rem) var(--font-display);letter-spacing:-.035em}
+.portrait-scene__caption span{font:.6rem var(--font-mono);letter-spacing:.08em;color:var(--text-muted);line-height:1.6}
+.portrait-scene__continue{position:absolute;z-index:4;left:var(--pad);bottom:34px;display:flex;align-items:center;gap:28px;color:var(--accent);font:.57rem var(--font-mono);text-transform:uppercase;letter-spacing:.09em;min-height:44px}
+.portrait-scene__continue>span{font-size:20px}
+.portrait-scene:not(.portrait-scene--visible) :is(.portrait-scene__bolt-main,.portrait-scene__bolt-main path,.portrait-scene__bolt-branches){animation-play-state:paused}
+#developer-details{scroll-margin-top:110px}
+.about .about__grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(35px,6vw,100px)}
+.about__technical{padding-top:55px;min-width:0}
+.about__technical .about__stats{margin-top:0}
+.about .about__lead{max-width:26ch}
+@keyframes portrait-current{to{stroke-dashoffset:-1020}}
+@media(min-width:1600px){.portrait-scene__image{height:108%;top:-3%}}
+@media(max-width:1024px){.portrait-scene{height:clamp(680px,85svh,1000px)}.portrait-scene__image{height:100%}.portrait-scene__coordinates>span:last-child{max-width:160px;text-align:right;line-height:1.8}.portrait-scene__caption{bottom:85px}.about .about__grid{grid-template-columns:minmax(0,1fr)}.about__technical{padding-top:0;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:30px}.about__technical .about__systems{margin-top:0}.about__technical .about__stats{align-self:start;gap:25px}}
+@media(max-width:600px){.portrait-scene{height:clamp(650px,90svh,850px);margin-bottom:50px}.portrait-scene__image{height:auto;width:115%;max-width:540px;top:50%;translate:-50% -50%;mask-image:linear-gradient(0deg,transparent,#000 16%,#000 93%,transparent),linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}.portrait-scene__coordinates{top:22px;font-size:.47rem;letter-spacing:.07em}.portrait-scene__coordinates>span:last-child{max-width:130px;font-size:.4rem}.portrait-scene__caption{bottom:74px;gap:12px}.portrait-scene__caption strong{font-size:1.3rem}.portrait-scene__caption span{font-size:.52rem;letter-spacing:.02em}.portrait-scene__caption>span{max-width:80px;text-align:right}.portrait-scene__continue{bottom:20px;font-size:.5rem}.portrait-scene__lightning{width:150%;left:-25%;mask-image:linear-gradient(90deg,#000 10%,#000 28%,transparent 41%,transparent 59%,#000 72%,#000 90%)}.portrait-scene__bolt-main{stroke-width:1}.about__technical{grid-template-columns:1fr;gap:25px}.about__technical .about__stats{justify-content:space-around}.about .about__lead{font-size:clamp(1.9rem,7vw,2.6rem)}}
+@media(prefers-reduced-motion:reduce){.portrait-scene__bolt-main,.portrait-scene__bolt-main path,.portrait-scene__bolt-branches{animation:none;stroke-dasharray:none}.portrait-scene__lightning{opacity:.45}}
+/* Independent typography layer: exactly 80% of the viewport width. */
+.portrait-scene__name{position:absolute;left:50%;translate:-50% 0;top:6%;width:80vw;max-width:none;height:auto;z-index:2;overflow:visible;pointer-events:none;filter:drop-shadow(0 0 14px #68dfff22)}
+.portrait-scene__name text{font-family:var(--font-display);font-size:178px;font-weight:700;letter-spacing:-.04em;stroke:#8edbeb66;stroke-width:.45px;paint-order:stroke fill}
+.portrait-scene__foreground{z-index:3;clip-path:polygon(29% 24%,39% 22%,52% 22%,62% 27%,66% 33%,67% 46%,62% 57%,67% 62%,90% 70%,99% 86%,100% 100%,0 100%,3% 82%,8% 74%,20% 67%,36% 61%,41% 57%,35% 53%,32% 48%,28% 45%,28% 43%,29% 41%,30% 38%,29% 33%)}
+.portrait-scene__lightning{z-index:4}.portrait-scene__edge{z-index:5}.portrait-scene__caption,.portrait-scene__continue,.portrait-scene__coordinates{z-index:6}
+@media(max-width:600px){.portrait-scene__name{top:15%;width:80vw}}

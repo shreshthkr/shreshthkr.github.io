@@ -1,0 +1,92 @@
+/* Device layouts: immersive desktop, touch gallery on tablet and phone. */
+html { scroll-padding-top: 96px; }
+img, canvas, svg { max-width: 100%; }
+main, .inner, .about__left, .about__right, .exp__body, .contact__info, .contact__formwrap { min-width: 0; }
+.spiral-visual { position: absolute; inset: 0; touch-action: pan-y; }
+.nav__burger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+.hero__socials a, .contact__socials a { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+.hero__cta, .nav__resume, .reactor__control, .spiral-actions a, .spiral-selector button, .contact__submit { min-height: 44px; }
+.spiral-actions { flex-wrap: wrap; gap: 10px 20px; }
+.contact__line-value { word-break: break-word; }
+.nav__overlay { padding: 80px 0 max(20px, env(safe-area-inset-bottom)); overflow-y: auto; }
+.nav__overlay ul { margin-block: auto; }
+.contact__field input, .contact__field textarea { font-size: 16px; }
+@media (max-width: 1100px) {
+  .nav { height: 72px; }
+  .nav__links, .nav__resume { display: none; }
+  .nav__burger { display: inline-flex; }
+  .hero { padding-top: 72px; }
+}
+@media (max-width: 1024px), (max-height: 650px) {
+  .spiral-projects { height: auto; padding: 95px var(--pad) 55px; scroll-margin-top: 0; }
+  .spiral-stage { position: relative; top: auto; height: auto; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'heading' 'visual' 'selector' 'detail' 'footer'; overflow: visible; gap: 20px; }
+  .spiral-heading { grid-area: heading; position: static; align-items: start; }
+  .spiral-heading h2 { font-size: clamp(2.1rem, 5vw, 3.5rem); }
+  .spiral-heading .eyebrow { font-size: .65rem; letter-spacing: .08em; }
+  .spiral-heading .projects__viewall { font-size: .65rem; max-width: 140px; line-height: 1.8; }
+  .spiral-visual { grid-area: visual; position: relative; inset: auto; height: clamp(250px, 42svh, 440px); border: 1px solid var(--line); overflow: hidden; }
+  .spiral-shade { display: none; }
+  .spiral-readout { display: none; }
+  .spiral-detail { grid-area: detail; position: relative; inset: auto; width: 100%; clip-path: none; }
+  .spiral-detail article { padding: 24px; }
+  .spiral-detail h3 { font-size: 2rem; }
+  .spiral-detail p { font-size: 1rem; line-height: 1.75; }
+  .agent-heading { padding: 15px 22px; font-size: .65rem; flex-wrap: wrap; }
+  .spiral-project-label { font-size: .65rem; }
+  .spiral-tech { gap: 8px; margin-block: 20px; }
+  .spiral-tech li { font-size: .65rem; padding: 7px 10px; }
+  .spiral-actions a { font-size: .78rem; }
+  .spiral-selector { grid-area: selector; position: static; display: flex; overflow-x: auto; gap: 4px; padding-bottom: 5px; scroll-snap-type: x proximity; }
+  .spiral-selector button { flex: 1 0 90px; min-width: 90px; padding: 13px 10px; min-height: 66px; font-size: .62rem; scroll-snap-align: start; }
+  .spiral-selector button>span:first-child { font-size: .8rem; }
+  .spiral-selector button>span:last-of-type { display: block; white-space: normal; overflow: visible; text-overflow: clip; }
+  .spiral-bottom { grid-area: footer; position: static; font-size: .5rem; line-height: 1.6; }
+  .spiral-bottom>span:first-child { display: none; }
+  .spiral-detail__footer { display: none; }
+  .helix-fallback__screens { inset: 5% 5% 5% 15%; }
+  .about__grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 30px; }
+  .skill-row { grid-template-columns: 1fr; gap: 18px; }
+  .exp__item { grid-template-columns: minmax(0, .8fr) minmax(0, 1.5fr); gap: 25px; }
+  .exp__meta { flex-direction: column; }
+  .gh__panel { padding: 22px 18px; }
+}
+@media (max-width: 600px) {
+  .about__grid, .exp__item { grid-template-columns: minmax(0, 1fr); }
+  .hero__layout { min-height: 0; }
+  .hero__copy { padding-bottom: 0; }
+  .lab-instruments { margin-top: 280px; }
+  .hero__title { font-size: clamp(2.8rem, 11.4vw, 4rem); letter-spacing: -.055em; }
+  .hero__intro { font-size: 1rem; }
+  .hero__type { font-size: .72rem; min-height: 53px; }
+  .hero__actions { gap: 10px; }
+  .hero__cta { font-size: .74rem; }
+  .hero__meta { font-size: .56rem; letter-spacing: .06em; }
+  .hero__socials { gap: 12px; }
+  .hero__eyebrow { font-size: .6rem; letter-spacing: .09em; }
+  .section-title { font-size: clamp(2rem, 10vw, 3rem); overflow-wrap: anywhere; }
+  .about__text p, .exp__points li { font-size: 1rem; }
+  .about__caption { font-size: .63rem; }
+  .contact__line-value { font-size: 1rem; }
+  .contact__title { font-size: clamp(2.2rem, 11vw, 4rem); }
+  .footer { padding-bottom: env(safe-area-inset-bottom, 0px); font-size: .65rem; }
+  .spiral-heading { flex-wrap: wrap; gap: 16px; }
+  .spiral-heading h2 br { display: none; }
+  .spiral-heading .projects__viewall { max-width: none; }
+  .spiral-heading h2 { font-size: 2.4rem; }
+  .spiral-detail article { padding: 21px 18px; }
+  .agent-heading { padding: 13px 18px; font-size: .59rem; }
+}
+@media (max-height: 650px) and (min-width: 601px) {
+  .hero__layout { min-height: 470px; }
+  .hero__copy { padding-top: 35px; padding-bottom: 35px; }
+  .hero__title { font-size: clamp(3rem, 7vw, 5rem); }
+  .nav__overlay a { font-size: 1.5rem; padding-block: .4rem; }
+  .spiral-visual { height: 330px; }
+}
+@media (pointer: coarse) {
+  .spiral-selector button { min-height: 58px; }
+  .system-rail { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
