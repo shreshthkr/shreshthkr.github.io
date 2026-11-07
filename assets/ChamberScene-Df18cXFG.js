@@ -1,0 +1,63 @@
+import{r as B,j as K,s as Q}from"./index-CniXSrli.js";import{W as Z,T as $,S as T,u as G,V as X,f as H,M as ee,P as te,v as ae,h as oe,B as re,p as I,A as se,q as ne,w as ie}from"./three.module-BAsvcekq.js";const ce="varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}",le=`
+precision highp float;
+varying vec2 vUv;
+uniform sampler2D chamber;
+uniform sampler2D discharge;
+uniform float aspect;
+uniform float imageAspect;
+uniform float focus;
+uniform float phase;
+uniform float charge;
+uniform float surge;
+uniform float reveal;
+uniform float zoom;
+uniform float pan;
+uniform float clock;
+uniform vec3 tint;
+uniform vec2 pointer;
+vec2 cover(vec2 uv){vec2 scale=vec2(min(aspect/imageAspect,1.),min(imageAspect/aspect,1.));return (uv-.5)*scale+vec2(focus,.5);}
+void main(){
+ vec2 uv=cover((vUv-.5)/zoom+.5);
+ uv.x+=pan*.35;
+ vec3 base=texture2D(chamber,uv).rgb;
+ float depth=dot(base,vec3(.21,.72,.07));
+ uv+=pointer*(.0015+depth*.003);
+ vec2 center=vec2(.68,.51);
+ vec2 delta=uv-center;
+ float radius=length(delta*vec2(1.75,1.));
+ float ring=exp(-pow((radius-(.08+phase*.5))/.09,2.));
+ vec2 shift=normalize(delta+vec2(.0001))*ring*surge*.006*sin(radius*65.-phase*24.);
+ float split=.0015*surge;
+ vec3 physical=vec3(texture2D(chamber,uv+shift+vec2(split,0.)).r,texture2D(chamber,uv+shift).g,texture2D(chamber,uv+shift-vec2(split,0.)).b);
+ float lightMask=smoothstep(.07,.6,dot(physical,vec3(.21,.72,.07)));
+ vec3 colored=mix(physical,physical*tint*1.8,charge*.52);
+ colored*=.2+reveal*.64+charge*.16;
+ colored+=physical*tint*surge*lightMask*.65;
+ vec2 boltUV=(uv-center)/vec2(.26,.52)+.5;
+ float bounds=step(0.,boltUV.x)*step(boltUV.x,1.)*step(0.,boltUV.y)*step(boltUV.y,1.);
+ vec3 bolt=texture2D(discharge,clamp(boltUV,0.,1.)).rgb;
+ float electric=dot(bolt,vec3(.25,.5,.25));
+ float windowMask=smoothstep(.24,.3,uv.y)*(1.-smoothstep(.65,.72,uv.y));
+ colored+=mix(bolt,vec3(electric)*tint*1.7,.7)*bounds*windowMask*charge*(.2+surge*.3);
+ float halo=exp(-radius*radius*14.);
+ colored+=tint*halo*charge*(.025+surge*.045);
+ float vignette=1.-smoothstep(.35,.95,length((vUv-.5)*vec2(1.,.7)));
+ colored*=.65+.35*vignette;
+ float edge=smoothstep(0.,.12,vUv.y)*(1.-smoothstep(.93,1.,vUv.y));
+ gl_FragColor=vec4(mix(vec3(.0196,.0392,.0627),colored,edge),1.);
+}`,ve=`
+uniform float clock;uniform float charge;uniform float size;uniform vec3 tint;
+attribute float seed;varying float opacity;varying vec3 color;
+void main(){
+ vec3 p=position;
+ float angle=seed*6.28318+clock*.13;
+ float tube=seed*134.1;
+ vec3 torus=vec3((.82+.24*cos(tube))*cos(angle),.72*sin(tube),(.82+.24*cos(tube))*sin(angle));
+ p=mix(p,torus,charge);
+ p.y+=sin(clock*.35+seed*25.)*.06;
+ vec4 mv=modelViewMatrix*vec4(p,1.);
+ gl_Position=projectionMatrix*mv;
+ gl_PointSize=clamp(size*(.5+fract(seed*51.))*220./(-mv.z),1.,5.);
+ opacity=(.12+charge*.55)*(.4+fract(seed*33.)*.6);
+ color=mix(tint,vec3(1.),fract(seed*71.)*.5);
+}`,ue="varying float opacity;varying vec3 color;void main(){float d=length(gl_PointCoord-.5);float a=(1.-smoothstep(.15,.5,d))*opacity;gl_FragColor=vec4(color,a);}";function de({progress:c,reduced:r}){const y=B.useRef(null);return B.useEffect(()=>{const s=y.current;let o;try{o=new Z({alpha:!0,antialias:!1,powerPreference:"low-power"})}catch{return}o.setPixelRatio(Math.min(devicePixelRatio,1.5)),o.setClearColor(330256,0),s.appendChild(o.domElement);const x=new $;let M=0,A=!1;const z=()=>{M++},l=x.load("/images/photoreal-energy-chamber.png",z),U=x.load("/images/photoreal-discharge.png",z),t={chamber:{value:l},discharge:{value:U},aspect:{value:1},imageAspect:{value:16/9},focus:{value:.5},phase:{value:0},charge:{value:0},surge:{value:0},reveal:{value:0},zoom:{value:1.16},pan:{value:0},clock:{value:0},tint:{value:new X(.35,.65,.85)},pointer:{value:new G}},C=new T({vertexShader:ce,fragmentShader:le,uniforms:t,depthWrite:!1,depthTest:!1}),S=new H,g=new ee(new te(2,2),C);g.frustumCulled=!1,S.add(g);const O=new ae,k=new H,v=new oe(42,1,.1,50);v.position.z=8;const u=window.innerWidth<760?700:1600,m=new Float32Array(u*3),E=new Float32Array(u);for(let e=0;e<u;e++){const a=e/u;E[e]=a,m[e*3]=Math.sin(e*24.7)*1.6,m[e*3+1]=(a-.5)*3.5,m[e*3+2]=Math.cos(e*17.3)*1.2}const p=new re;p.setAttribute("position",new I(m,3)),p.setAttribute("seed",new I(E,1));const d={clock:{value:0},charge:{value:0},size:{value:1},tint:{value:new X(.35,.65,.85)}},P=new T({vertexShader:ve,fragmentShader:ue,uniforms:d,transparent:!0,blending:se,depthWrite:!1}),b=new ne(p,P);k.add(b);let n=1,i=1,V=!1,w,D=0,f=c.current,F=!0;const h={x:0,y:0};function L(){n=s.clientWidth,i=s.clientHeight,o.setSize(n,i),t.aspect.value=n/i,t.focus.value=n<760?.66:.5,v.aspect=n/i,v.updateProjectionMatrix()}const R=new ResizeObserver(L);R.observe(s),L();const q=new IntersectionObserver(([e])=>V=e.isIntersecting);q.observe(s);function W(e){const a=s.getBoundingClientRect();h.x=(e.clientX-a.left)/a.width-.5,h.y=(e.clientY-a.top)/a.height-.5}window.addEventListener("pointermove",W,{passive:!0});const _=e=>{e.preventDefault(),s.classList.remove("chamber-renderer--ready")};o.domElement.addEventListener("webglcontextlost",_);function j(e){if(w=requestAnimationFrame(j),A||!V||document.hidden||e-D<32||(D=e,M<2))return;F&&(f=c.current,F=!1),f+=(c.current-f)*(r?1:.09);const a=Q(r?.35:f);t.imageAspect.value=l.image.width/l.image.height,t.phase.value=a.progress,t.charge.value=a.charge,t.surge.value=r?0:a.surge,t.reveal.value=r?1:a.reveal,t.zoom.value=r?1.03:a.zoom,t.pan.value=r?0:a.pan,t.tint.value.set(...a.color),t.clock.value=r?0:e*.001,t.pointer.value.lerp(new G(r?0:h.x,r?0:h.y),.04),d.clock.value=r?0:e*.001,d.charge.value=a.charge,d.tint.value.copy(t.tint.value);const N=Math.min(n/i/t.imageAspect.value,1),Y=(.68-t.focus.value)/N,J=2*Math.tan(ie.degToRad(21))*8;b.position.set(Y*J*(n/i),.22,0),b.scale.setScalar(n<760?.65:.85),o.autoClear=!0,o.render(S,O),o.autoClear=!1,o.render(k,v),s.classList.add("chamber-renderer--ready")}return w=requestAnimationFrame(j),()=>{A=!0,cancelAnimationFrame(w),R.disconnect(),q.disconnect(),window.removeEventListener("pointermove",W),o.domElement.removeEventListener("webglcontextlost",_),l.dispose(),U.dispose(),C.dispose(),g.geometry.dispose(),p.dispose(),P.dispose(),o.dispose(),o.domElement.remove()}},[c,r]),K.jsx("div",{className:"chamber-renderer",ref:y,"aria-hidden":"true"})}export{de as default};
